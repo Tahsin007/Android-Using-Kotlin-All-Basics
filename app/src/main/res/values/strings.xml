@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Practice Design</string>
+    <string-array name="countries">
+        <item>England</item>
+        <item>America</item>
+        <item>India</item>
+        <item>Bangladesh</item>
+        <item>Srilanka</item>
+    </string-array>
+</resources>
