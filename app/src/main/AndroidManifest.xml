@@ -13,6 +13,18 @@
         android:theme="@style/Theme.PracticeDesign"
         tools:targetApi="31">
         <activity
+            android:name=".IntentTesting"
+            android:exported="false" />
+        <activity
+            android:name=".Intent"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".RecyclerViews"
             android:exported="true">
             <intent-filter>

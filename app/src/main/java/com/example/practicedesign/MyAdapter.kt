@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import de.hdodenhof.circleimageview.CircleImageView
 
@@ -18,6 +20,7 @@ class MyAdapter(
         var textViewName:TextView = ItemView.findViewById(R.id.cardName)
         var textViewDescription:TextView = ItemView.findViewById(R.id.cardDescriptions)
         var cardImage:CircleImageView =ItemView.findViewById(R.id.cardImage)
+        var cardView:CardView = ItemView.findViewById(R.id.cardView)
 
 
     }
@@ -35,6 +38,10 @@ class MyAdapter(
         holder.textViewName.text = Names.get(position)
         holder.textViewDescription.text = details.get(position)
         holder.cardImage.setImageResource(Images.get(position))
+
+        holder.cardView.setOnClickListener {
+            Toast.makeText(context,"The name you selected is ${Names.get(position)}",Toast.LENGTH_LONG).show()
+        }
     }
 
 
